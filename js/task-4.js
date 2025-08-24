@@ -9,13 +9,14 @@ function formListener(event) {
 
   const elem = event.target.elements;
 
-  const info = {
-    email: elem.email.value.trim(),
-    passwords: elem.password.value.trim(),
-  };
-
-  if (info.email === '' || info.passwords === '') {
+  if (elem.email.value.trim() === '' || elem.password.value.trim() === '') {
     alert("'All form fields must be filled in'");
+  } else {
+    const info = {
+      email: elem.email.value.trim(),
+      password: elem.password.value.trim(),
+    };
+    event.target.reset();
+    console.log(info);
   }
-  event.target.reset();
 }

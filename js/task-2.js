@@ -32,10 +32,10 @@ const ulGallery = document.querySelector('.gallery');
 const arrMap = images
   .map(
     item =>
-      `<li class="imagesLi"><img class="img" src='${item.url}' alt="${item.alt}" width = '360';
-height = '300';></ li>`
+      `<li class="imagesLi"><img class="img" src='${item.url}' alt="${item.alt}"></li>`
   )
   .join('');
+
 ulGallery.insertAdjacentHTML('beforeend', arrMap);
 
 console.log(arrMap);
